@@ -87,6 +87,7 @@ class QuoteFinderBot(commands.Bot):
         # Load the cogs
         await self.load_extension("cogs.search")
         await self.load_extension("cogs.admin")
+        await self.load_extension("cogs.keepalive")
         print("Loaded cogs.")
 
     async def close(self):

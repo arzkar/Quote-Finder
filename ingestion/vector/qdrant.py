@@ -120,6 +120,9 @@ class QdrantStore(VectorStore):
             ),
         )
 
+    async def ping(self) -> None:
+        await self.client.get_collections()
+
     async def search(
         self,
         vector: list[float],
